@@ -1,0 +1,3 @@
+-Fix microphone access
+-find if clipboard has text copied (document.execCommand('paste'))
+-speech for bookmarking

@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+
+    "name": "Speak and Find",
+    "description": "A speech recognition tool to search the current web page's content",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "mic_19px.png",
+        "default_popup": "index.html",
+        "default_title": "click to speak!" 
+    },
+
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+F",
+                "mac": "Command+Shift+F",
+                "chromeos": "Ctrl+Shift+F",
+                "linux": "Ctrl+Shift+F"
+            }
+        }
+    },
+
+    // -----  for background listening to commands  -----
+    // "background": {
+    //     "persistent": true,
+    //     "scripts": ["background.js"]
+    // }
+
+    // "content_scripts": [
+    //     {
+    //         "js": ["app.js"]
+    //     }
+    // ],
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "clipboardRead",
+        "http://www.google.com/" //cross-origin permission
+    ]
+}
